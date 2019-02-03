@@ -1,0 +1,15 @@
+@function color($color) {
+  @if (map-has-key($palette, $color)) {
+    @return map-get($palette, $color);
+  } @else {
+    @error 'not a valid color choice';
+  }
+}
+
+@function bp($breakpoint) {
+  @if (map-has-key($breakpoints, $breakpoint)) {
+    @return map-get($breakpoints, $breakpoint);
+  } @else {
+    @error 'invalid breakpoint';
+  }
+}
