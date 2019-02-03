@@ -1,10 +1,20 @@
 // named colors
+$white: #fff;
 
 $palette: (
   primary: #362a58,
   secondary: #fe125c,
   accent: #8e8b9f,
   highlight: #f6ac91,
-  font: #151023,
+  font: #202020,
   background: #fffffa
+);
+
+$greys: (
+  0: $white,
+  1: darken($white, 33%),
+  2: darken($white, 50%),
+  3: darken($white, 75%),
+  4: darken($white, 80%),
+  5: darken($white, 100%)
 );

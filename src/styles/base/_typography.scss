@@ -4,8 +4,71 @@ $heading-font: 'Space Mono', monospace;
 $body-font: 'Montserrat', sans-serif;
 
 // font-weight
-$fw: (
-  1: 200,
-  2: 400,
-  3: 900
-);
+$fw-1: 200;
+$fw-2: 400;
+$fw-3: 900;
+
+// font-sizes
+$base-font: 1.6rem;
+
+// * code starts here * //
+
+// set html to 10px to create base 10
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $body-font;
+  font-size: $base-font;
+  color: color(font);
+  line-height: 1.35;
+  letter-spacing: $spacer * 0.075;
+  // almost all text should be centered
+  text-align: center;
+}
+
+h1 h2,
+h3,
+h4,
+h5 {
+  font-family: $heading-font;
+}
+
+h2,
+h3 {
+  color: grey(5);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: $base-font * 2.15;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: $base-font * 1.5;
+  text-transform: uppercase;
+  color: color(primary);
+}
+
+.page-title {
+  font-family: $body-font;
+  font-weight: $fw-1;
+  font-size: $base-font * 10;
+  color: color(accent);
+  line-height: 0.95;
+}
+
+.section {
+  &__title {
+    color: color(secondary);
+    line-height: 1;
+  }
+
+  &__subtitle {
+    color: grey(1);
+    line-height: 1.1;
+    font-weight: $fw-3;
+  }
+}
