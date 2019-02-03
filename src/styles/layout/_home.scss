@@ -1,0 +1,30 @@
+.section--home {
+  min-height: 90vh;
+  background-image: linear-gradient(
+      45deg,
+      rgba(color(accent), 0.5),
+      rgba(color(accent), 0.5)
+    ),
+    url(../images/header.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: top;
+  clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 98%);
+  margin-bottom: $spacer * 2;
+
+  .page-title {
+    &__1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: $spacer;
+    }
+
+    &__2 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: $spacer;
+    }
+  }
+}

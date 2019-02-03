@@ -1,0 +1,21 @@
+.nav {
+  position: sticky;
+  top: 0;
+  padding: 1px;
+  background: color(background);
+  z-index: 1;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  a {
+    color: grey(2);
+  }
+}
+
+.logo {
+  display: none;
+}
