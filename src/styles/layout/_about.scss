@@ -1,0 +1,23 @@
+.section--about {
+  &__image {
+    // shadow should only show if clip fails
+    box-shadow: $box-shadow;
+    @include clip-left;
+    margin-bottom: $spacer * 2;
+  }
+
+  .section__subtitle {
+    transform: skewY(2deg);
+  }
+
+  &__paragraphs {
+    @include clip-right;
+
+    h3 {
+      transform: rotate(-3deg);
+      @include line-break($margin: $spacer * 1.25, $width: 70%) {
+        transform: rotate(2deg);
+      }
+    }
+  }
+}

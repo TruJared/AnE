@@ -9,8 +9,7 @@
   background-size: cover;
   position: relative;
   background-position: top;
-  clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 98%);
-  margin-bottom: $spacer * 2;
+  @include clip-right;
 
   .page-title {
     &__1 {

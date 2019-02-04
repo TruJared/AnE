@@ -18,3 +18,5 @@ $greys: (
   4: darken($white, 80%),
   5: darken($white, 100%)
 );
+
+$box-shadow: 0 0 1rem rgba(darken($white, 50%), 0.75);
