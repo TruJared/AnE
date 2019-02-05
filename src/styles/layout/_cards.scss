@@ -1,0 +1,25 @@
+.card {
+  box-shadow: $box-shadow;
+  margin-bottom: $spacer * 3;
+
+  &__body {
+    padding: $spacer * 2;
+    font-size: $base-font * 0.9;
+    font-weight: $fw-3;
+  }
+
+  &__credit {
+    background: rgba(color(accent), 0.7);
+    padding: $spacer * 0.25;
+  }
+
+  &__name,
+  &__date {
+    margin: $spacer * 0.5 0;
+  }
+
+  &__date {
+    font-size: $base-font * 0.85;
+    font-style: italic;
+  }
+}

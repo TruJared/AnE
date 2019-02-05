@@ -1,0 +1,23 @@
+.footer {
+  background: $black;
+  color: grey(2);
+  padding: $spacer;
+
+  p {
+    margin: 0;
+    padding-top: $spacer;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    padding-top: $spacer;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li:not(:last-of-type) {
+      padding-right: $spacer * 2;
+    }
+  }
+}
