@@ -38,7 +38,7 @@ h5 {
 h2,
 h3 {
   color: grey(5);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 h2 {
@@ -61,15 +61,23 @@ h3 {
   letter-spacing: $spacer * 0.25;
 }
 
-.section {
-  &__title {
-    color: color(secondary);
-    line-height: 1;
+.section__title {
+  color: color(secondary);
+  line-height: 1;
+}
+
+.section__subtitle {
+  color: grey(1);
+  line-height: 1.25;
+  font-weight: $fw-3;
+}
+
+.font__override {
+  &--white {
+    color: color(background);
   }
 
-  &__subtitle {
+  &--grey1 {
     color: grey(1);
-    line-height: 1.1;
-    font-weight: $fw-3;
   }
 }

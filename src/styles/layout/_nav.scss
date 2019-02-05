@@ -1,9 +1,10 @@
 .nav {
   position: sticky;
+  width: 100%;
   top: 0;
   padding: 1px;
   background: rgba(color(background), 0.97);
-  z-index: 1;
+  z-index: 999;
   ul {
     list-style: none;
     display: flex;

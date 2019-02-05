@@ -1,0 +1,42 @@
+.section--gallery {
+  background-image: linear-gradient(
+      45deg,
+      rgba(color(primary), 0.8),
+      rgba(color(primary), 0.8)
+    ),
+    url(../images/bg.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: top;
+  @include clip-right;
+
+  .section__title {
+    transform: rotate(-8deg);
+  }
+
+  .section__subtitle {
+    transform: rotate(3deg);
+    margin-bottom: $spacer + 1.5;
+  }
+
+  .gallery {
+    &__figure {
+      margin: 0;
+      position: relative;
+      margin-bottom: $spacer;
+    }
+
+    &__caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(grey(4), 0.5);
+      padding: $spacer * 1.5;
+    }
+
+    &__title {
+      margin: 0;
+    }
+  }
+}

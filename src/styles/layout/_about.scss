@@ -3,7 +3,6 @@
     // shadow should only show if clip fails
     box-shadow: $box-shadow;
     @include clip-left;
-    margin-bottom: $spacer * 2;
   }
 
   .section__subtitle {
