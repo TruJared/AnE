@@ -11,13 +11,12 @@
   }
 
   &__paragraphs {
+    background: color(highlight);
     @include clip-right;
 
     h3 {
-      transform: rotate(-3deg);
-      @include line-break($margin: $spacer * 1.25, $width: 70%) {
-        transform: rotate(2deg);
-      }
+      transform: rotate(-2deg);
+      @include line-break($margin: $spacer * 1.25, $width: 35%);
     }
   }
 }

@@ -1,0 +1,12 @@
+.section--info {
+  @include clip-left(4%);
+
+  .section__title {
+    text-shadow: 1px 1px 5px rgba(grey(4), 0.2);
+    transform: skewY(3deg);
+  }
+
+  .section__subtitle {
+    transform: skewY(1deg);
+  }
+}

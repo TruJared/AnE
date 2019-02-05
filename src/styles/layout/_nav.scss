@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   padding: 1px;
-  background: color(background);
+  background: rgba(color(background), 0.97);
   z-index: 1;
   ul {
     list-style: none;

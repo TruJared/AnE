@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: color(background);
 }
@@ -16,8 +20,4 @@ a {
 .section {
   padding: $spacer * 1.5 $spacer * 2 $spacer * 2;
   // margin-bottom: $spacer * 2;
-}
-
-.section--about__paragraphs {
-  background: color(highlight);
 }
