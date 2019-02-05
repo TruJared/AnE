@@ -11,21 +11,35 @@
   @include clip-right;
 
   .section__title {
-    transform: rotate(-8deg);
+    transform: rotate(-2deg);
   }
 
   .section__subtitle {
-    transform: rotate(3deg);
+    transform: rotate(1deg);
     margin-bottom: $spacer + 1.5;
   }
 
   .gallery {
+    @include limit-width;
+
     &__figure {
       margin: 0;
       position: relative;
-      margin-bottom: $spacer * 4;
-    }
+      margin-bottom: $spacer * 2;
 
+      @include mq(md) {
+        margin-bottom: $spacer * 7;
+      }
+
+      @include mq(lg) {
+        transition: all 1s ease-in;
+
+        &:hover {
+          filter: grayscale(100);
+          z-index: 1;
+        }
+      }
+    }
     &__caption {
       position: absolute;
       left: 0;
@@ -37,6 +51,10 @@
 
     &__title {
       margin: 0;
+    }
+    @include mq(lg) {
+      @include grid(3);
+      width: 100%;
     }
   }
 }

@@ -5,17 +5,75 @@
     @include clip-left;
   }
 
+  &__paragraphs {
+    background: color(highlight);
+    @include clip-right;
+    @include mq(md) {
+      margin-top: $spacer;
+    }
+
+    h3 {
+      transform: rotate(-2deg);
+      @include line-break($margin: $spacer * 1.25, $width: 72%);
+      @include mq(md) {
+        font-size: 4vw;
+      }
+    }
+
+    p {
+      @include limit-width;
+    }
+  }
+
   .section__subtitle {
     transform: skewY(2deg);
   }
 
-  &__paragraphs {
-    background: color(highlight);
-    @include clip-right;
+  .mobile-logo {
+    display: inline-block;
 
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  @include mq(lg) {
+    .section__subtitle,
     h3 {
-      transform: rotate(-2deg);
-      @include line-break($margin: $spacer * 1.25, $width: 35%);
+      display: none;
+    }
+
+    .section__title {
+      text-align: right;
+      padding: 0 $spacer;
+      @include mq(xl) {
+        padding-right: 10vw;
+      }
+    }
+
+    p {
+      width: 90%;
+    }
+
+    &__paragraphs {
+      padding-top: 20px;
+      background: none;
+      @include line-break(
+        $width: 50%,
+        $height: 1px,
+        $color: rgba(grey(1), 0.65)
+      );
+    }
+
+    &__image {
+      width: 40%;
+      @include clip-right(0%);
+      float: left;
+      margin-top: -200px;
+      margin-left: 15px;
+      margin-right: 25px;
+      // border: 5px solid rgba(grey(3), 0.1);
+      // border-radius: 50%;
     }
   }
 }

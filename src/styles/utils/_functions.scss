@@ -10,14 +10,6 @@
   }
 }
 
-@function bp($breakpoint) {
-  @if (map-has-key($breakpoints, $breakpoint)) {
-    @return map-get($breakpoints, $breakpoint);
-  } @else {
-    @error 'invalid breakpoint';
-  }
-}
-
 @function grey($shade: 3) {
   @if (map-has-key($greys, $shade)) {
     @return map-get($greys, $shade);
@@ -25,3 +17,12 @@
     @error 'invalid shade';
   }
 }
+
+// ! created mixin instead ! //
+// @function bp($breakpoint) {
+//   @if (map-has-key($breakpoints, $breakpoint)) {
+//     @return map-get($breakpoints, $breakpoint);
+//   } @else {
+//     @error 'invalid breakpoint';
+//   }
+// }

@@ -20,4 +20,14 @@ $greys: (
   5: darken($white, 100%)
 );
 
+// spacer == 10px (see typography)
+$spacer: 1rem;
+
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 991px,
+  xl: 1199px
+);
+
 $box-shadow: 0 0 0.5rem rgba(darken($white, 50%), 0.75);

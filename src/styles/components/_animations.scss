@@ -1,0 +1,15 @@
+.endless-spin {
+  animation-name: spin;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 1.3, 0.57, 1.04);
+}
+
+@keyframes spin {
+  10% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}

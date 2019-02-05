@@ -14,6 +14,21 @@
   }
 }
 
+// if query is number create mixin else get from mixin list
+@mixin mq($query) {
+  @if (type-of($query) == number) {
+    @media only screen and (min-width: $query) {
+      @content;
+    }
+  } @else if (map-has-key($breakpoints, $query)) {
+    @media only screen and (min-width: map-get($breakpoints, $query)) {
+      @content;
+    }
+  } @else {
+    @error value must be unit of measurement or listed in $breakpoints map;
+  }
+}
+
 @mixin line-break(
   $margin: $spacer * 0.5,
   // currentColor == current text color
@@ -30,6 +45,22 @@
     width: $width;
     @content;
   }
+}
+
+// * also a good easy fallback for non grid supported devices * //
+@mixin limit-width {
+  @include mq(md) {
+    width: 750px;
+    margin: $spacer * 4 auto;
+  }
+}
+
+// ! grid is set for current site (not universal) ! //
+@mixin grid($cols) {
+  display: grid;
+  grid: auto-flow / repeat($cols, 1fr);
+  grid-gap: $spacer * 2;
+  margin: 0 auto;
 }
 
 // * hacky glass * //

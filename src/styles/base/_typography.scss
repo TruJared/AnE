@@ -26,6 +26,11 @@ body {
   letter-spacing: $spacer * 0.075;
   // almost all text should be centered
   text-align: center;
+
+  @include mq(md) {
+    line-height: 1.4;
+    letter-spacing: $spacer * 0.09;
+  }
 }
 
 h1 h2,

@@ -8,7 +8,12 @@
     transform: skewY(1deg);
   }
 
-  h3 {
-    transform: rotateY(180deg);
+  .facts-wrapper {
+    @include mq(lg) {
+      max-width: 1200px;
+      @include grid(4);
+      line-height: 1.4;
+      letter-spacing: $spacer * 0.1;
+    }
   }
 }
