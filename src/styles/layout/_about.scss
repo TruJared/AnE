@@ -22,6 +22,12 @@
 
     p {
       @include limit-width;
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &:last-of-type {
+        margin-bottom: $spacer * 4;
+      }
     }
   }
 
@@ -45,9 +51,8 @@
 
     .section__title {
       text-align: right;
-      padding: 0 $spacer;
+      padding-right: 8vw;
       @include mq(xl) {
-        padding-right: 10vw;
       }
     }
 

@@ -7,7 +7,7 @@
   @include limit-width;
   @include mq(lg) {
     @include grid(3);
-    width: 99%;
+    width: 94vw;
   }
 }
 

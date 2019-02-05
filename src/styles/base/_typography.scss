@@ -30,6 +30,10 @@ body {
   @include mq(md) {
     line-height: 1.4;
     letter-spacing: $spacer * 0.09;
+
+    @include mq(xl) {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -48,6 +52,9 @@ h3 {
 
 h2 {
   font-size: $base-font * 2;
+  @include mq(lg) {
+    font-size: $base-font * 2.25;
+  }
   text-transform: capitalize;
 }
 
